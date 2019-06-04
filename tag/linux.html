@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
         <meta charset="utf-8" />
-        <title>841BC - Tags</title>
+        <title>841BC - linux</title>
         <link rel="stylesheet" href="http://p.841bc.net/theme/css/main.css" />
         <link href="http://p.841bc.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="841BC Atom Feed" />
 </head>
@@ -19,35 +19,27 @@
                 </ul></nav>
         </header><!-- /#banner -->
 
-<section id="content" class="body">
-    <h1>Tags for 841BC</h1>
-    <ul>
-        <li><a href="http://p.841bc.net/tag/ab.html">ab</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/aes.html">AES</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/bottle.html">bottle</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/djiango.html">djiango</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/falcon.html">falcon</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/flask.html">flask</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/geohash.html">Geohash</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/gis.html">GIS</a> (2)</li>
-        <li><a href="http://p.841bc.net/tag/https.html">https</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/java.html">Java</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/jing-wei-du.html">经纬度</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/linux.html">linux</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/md5.html">MD5</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/mvn.html">mvn</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/nginx.html">Nginx</a> (2)</li>
-        <li><a href="http://p.841bc.net/tag/nignx.html">nignx</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/openssl.html">openssl</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/python.html">Python</a> (2)</li>
-        <li><a href="http://p.841bc.net/tag/sha.html">SHA</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/systemctl.html">systemctl</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/tornado.html">tornado</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/webmercator.html">WebMercator</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/zheng-shu.html">证书</a> (1)</li>
-    </ul>
-</section>
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="http://p.841bc.net/a-li-yun-ci-pan-gua-zai.html">阿里云磁盘挂载</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2019-06-04T00:00:00+02:00">
+                Published: Tue 04 June 2019
+        </abbr>
 
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://p.841bc.net/author/wang-jiang.html">Wang Jiang</a>
+        </address>
+<p>In <a href="http://p.841bc.net/category/linux.html">Linux</a>.</p>
+<p>tags: <a href="http://p.841bc.net/tag/linux.html">linux</a> </p>
+</footer><!-- /.post-info --><p>fdisk  -l
+fdisk /dev/vdb         依次输入 n，p，1，两次回车，wq
+mkfs.ext3 /dev/vdb1
+echo /dev/vdb1 /mnt ext3 defaults 0 0 &gt;&gt; /etc/fstab
+mount /dev/vdb1 /mnt
+df -h</p>
+<p>按照上面这个顺序就可以完成挂载，具体命令的含义，可以自行搜索。</p>                </article>
+            </aside><!-- /#featured -->
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>links</h2>

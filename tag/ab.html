@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
         <meta charset="utf-8" />
-        <title>841BC - Tags</title>
+        <title>841BC - ab</title>
         <link rel="stylesheet" href="http://p.841bc.net/theme/css/main.css" />
         <link href="http://p.841bc.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="841BC Atom Feed" />
 </head>
@@ -19,35 +19,35 @@
                 </ul></nav>
         </header><!-- /#banner -->
 
-<section id="content" class="body">
-    <h1>Tags for 841BC</h1>
-    <ul>
-        <li><a href="http://p.841bc.net/tag/ab.html">ab</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/aes.html">AES</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/bottle.html">bottle</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/djiango.html">djiango</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/falcon.html">falcon</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/flask.html">flask</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/geohash.html">Geohash</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/gis.html">GIS</a> (2)</li>
-        <li><a href="http://p.841bc.net/tag/https.html">https</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/java.html">Java</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/jing-wei-du.html">经纬度</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/linux.html">linux</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/md5.html">MD5</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/mvn.html">mvn</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/nginx.html">Nginx</a> (2)</li>
-        <li><a href="http://p.841bc.net/tag/nignx.html">nignx</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/openssl.html">openssl</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/python.html">Python</a> (2)</li>
-        <li><a href="http://p.841bc.net/tag/sha.html">SHA</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/systemctl.html">systemctl</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/tornado.html">tornado</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/webmercator.html">WebMercator</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/zheng-shu.html">证书</a> (1)</li>
-    </ul>
-</section>
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="http://p.841bc.net/ji-chong-python-web-frameworkxing-neng-bi-jiao.html">几种Python Web Framework性能比较</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2019-06-04T00:00:00+02:00">
+                Published: Tue 04 June 2019
+        </abbr>
 
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://p.841bc.net/author/wang-jiang.html">Wang Jiang</a>
+        </address>
+<p>In <a href="http://p.841bc.net/category/python.html">Python</a>.</p>
+<p>tags: <a href="http://p.841bc.net/tag/python.html">Python</a> <a href="http://p.841bc.net/tag/tornado.html">tornado</a> <a href="http://p.841bc.net/tag/flask.html">flask</a> <a href="http://p.841bc.net/tag/falcon.html">falcon</a> <a href="http://p.841bc.net/tag/bottle.html">bottle</a> <a href="http://p.841bc.net/tag/djiango.html">djiango</a> <a href="http://p.841bc.net/tag/ab.html">ab</a> </p>
+</footer><!-- /.post-info --><p>参与比较的Python框架有：tornado,flask,falcon,bottle,djiango</p>
+<p>测试采用ab命令。</p>
+<p>操作系统是：CentOS  7.2 64位。</p>
+<p>硬件指标：CPU： 4核    内存：8 GB。</p>
+<p>测试时使用2核。</p>
+<p>容器采用uwsgi和gunicorn</p>
+<p>Python采用CPython2.7和pypy5.0。</p>
+<p>测试代码下相应GET请求返回文字“Hello World”，没有模板，没有数据库请求等额外开销。</p>
+<p>测试结果：</p>
+<p>测试脚本“ab -n 1000 -c 100 http://192.168.0.102:9090/”
+<img alt="1000" src="/images/ab-n1000.png">
+测试脚本“ab -n 10000 -c 100 http://192.168.0.102:9090/”
+<img alt="1000" src="/images/ab-n10000.png">
+其中没有结果的是测试数据没有完成就断开连接了。</p>
+<p>结论：性能最好的组合是falcon+gunicorn+pypy。该组合适合用于实现微服务。django虽然在性能上不是最优但是作为功能最完整的框架依然适合中大型应用的开发。tornado还没有在实际应用中使用过，有了解的朋友请补充一下。</p>                </article>
+            </aside><!-- /#featured -->
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>links</h2>

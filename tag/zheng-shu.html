@@ -11,26 +11,28 @@
         <header id="banner" class="body">
                 <h1><a href="http://p.841bc.net/">841BC </a></h1>
                 <nav><ul>
+                    <li><a href="http://p.841bc.net/category/gis.html">GIS</a></li>
                     <li><a href="http://p.841bc.net/category/java.html">Java</a></li>
+                    <li><a href="http://p.841bc.net/category/linux.html">Linux</a></li>
                     <li><a href="http://p.841bc.net/category/nginx.html">Nginx</a></li>
+                    <li><a href="http://p.841bc.net/category/python.html">Python</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://p.841bc.net/nginx-client-cert.html">加密算法比较</a></h1>
+                    <h1 class="entry-title"><a href="http://p.841bc.net/nginxshi-xian-shuang-xiang-ren-zheng-zhi-jie-shang-jiao-ben-xiang-xue-xi-geng-duo-de-kan-can-kao.html">Nginx实现双向认证，直接上脚本，想学习更多的看参考</a></h1>
 <footer class="post-info">
         <abbr class="published" title="2019-06-04T00:00:00+02:00">
                 Published: Tue 04 June 2019
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="http://p.841bc.net/author/wj.html">wj</a>
+                By                         <a class="url fn" href="http://p.841bc.net/author/wang-jiang.html">Wang Jiang</a>
         </address>
 <p>In <a href="http://p.841bc.net/category/nginx.html">Nginx</a>.</p>
 <p>tags: <a href="http://p.841bc.net/tag/nginx.html">nginx</a> <a href="http://p.841bc.net/tag/https.html">https</a> <a href="http://p.841bc.net/tag/openssl.html">openssl</a> <a href="http://p.841bc.net/tag/zheng-shu.html">证书</a> </p>
-</footer><!-- /.post-info --><h4>Nginx实现双向认证，直接上脚本，想学习更多的看参考。</h4>
-<p>第一步、创建证书</p>
+</footer><!-- /.post-info --><p>第一步、创建证书</p>
 <p>//创建根证书root</p>
 <p>openssl genrsa -des3 -out root.key 4096</p>
 <p>openssl req -new -x509 -days 3650 -key root.key -out root.crt</p>

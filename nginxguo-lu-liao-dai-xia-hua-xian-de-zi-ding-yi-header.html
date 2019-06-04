@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
         <meta charset="utf-8" />
-        <title>841BC - Tags</title>
+        <title>Nginx过滤了带下划线的自定义Header</title>
         <link rel="stylesheet" href="http://p.841bc.net/theme/css/main.css" />
         <link href="http://p.841bc.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="841BC Atom Feed" />
 </head>
@@ -14,40 +14,34 @@
                     <li><a href="http://p.841bc.net/category/gis.html">GIS</a></li>
                     <li><a href="http://p.841bc.net/category/java.html">Java</a></li>
                     <li><a href="http://p.841bc.net/category/linux.html">Linux</a></li>
-                    <li><a href="http://p.841bc.net/category/nginx.html">Nginx</a></li>
+                    <li class="active"><a href="http://p.841bc.net/category/nginx.html">Nginx</a></li>
                     <li><a href="http://p.841bc.net/category/python.html">Python</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
-
 <section id="content" class="body">
-    <h1>Tags for 841BC</h1>
-    <ul>
-        <li><a href="http://p.841bc.net/tag/ab.html">ab</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/aes.html">AES</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/bottle.html">bottle</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/djiango.html">djiango</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/falcon.html">falcon</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/flask.html">flask</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/geohash.html">Geohash</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/gis.html">GIS</a> (2)</li>
-        <li><a href="http://p.841bc.net/tag/https.html">https</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/java.html">Java</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/jing-wei-du.html">经纬度</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/linux.html">linux</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/md5.html">MD5</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/mvn.html">mvn</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/nginx.html">Nginx</a> (2)</li>
-        <li><a href="http://p.841bc.net/tag/nignx.html">nignx</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/openssl.html">openssl</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/python.html">Python</a> (2)</li>
-        <li><a href="http://p.841bc.net/tag/sha.html">SHA</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/systemctl.html">systemctl</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/tornado.html">tornado</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/webmercator.html">WebMercator</a> (1)</li>
-        <li><a href="http://p.841bc.net/tag/zheng-shu.html">证书</a> (1)</li>
-    </ul>
-</section>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="http://p.841bc.net/nginxguo-lu-liao-dai-xia-hua-xian-de-zi-ding-yi-header.html" rel="bookmark"
+           title="Permalink to Nginx过滤了带下划线的自定义Header">Nginx过滤了带下划线的自定义Header</a></h1>
+    </header>
 
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2019-06-04T00:00:00+02:00">
+                Published: Tue 04 June 2019
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://p.841bc.net/author/wang-jiang.html">Wang Jiang</a>
+        </address>
+<p>In <a href="http://p.841bc.net/category/nginx.html">Nginx</a>.</p>
+<p>tags: <a href="http://p.841bc.net/tag/nginx.html">Nginx</a> </p>
+</footer><!-- /.post-info -->      <p>服务的需要一个自定义的header，'my_header'，选择'<em>'而不是'-'的原因就不在这里讨论了。通过nginx反向代理后，传到服务端，'my_header'不见了。问了一下Bing（没用谷歌，也没用Baidu），结果发现nginx里有一个 开关，' underscores_in_headers'，设置为‘off’就会拦截所有带'</em>'的header，设置为‘on’就放过。缺省是‘off’。所以只要在http或者server中设置一下就好了。</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>links</h2>

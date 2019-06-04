@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
         <meta charset="utf-8" />
-        <title>841BC - Nginx</title>
+        <title>841BC - GIS</title>
         <link rel="stylesheet" href="http://p.841bc.net/theme/css/main.css" />
         <link href="http://p.841bc.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="841BC Atom Feed" />
 </head>
@@ -11,7 +11,7 @@
         <header id="banner" class="body">
                 <h1><a href="http://p.841bc.net/">841BC </a></h1>
                 <nav><ul>
-                    <li><a href="http://p.841bc.net/category/gis.html">GIS</a></li>
+                    <li class="active"><a href="http://p.841bc.net/category/gis.html">GIS</a></li>
                     <li><a href="http://p.841bc.net/category/java.html">Java</a></li>
                     <li><a href="http://p.841bc.net/category/linux.html">Linux</a></li>
                     <li><a href="http://p.841bc.net/category/nginx.html">Nginx</a></li>
@@ -21,7 +21,7 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://p.841bc.net/nginxguo-lu-liao-dai-xia-hua-xian-de-zi-ding-yi-header.html">Nginx过滤了带下划线的自定义Header</a></h1>
+                    <h1 class="entry-title"><a href="http://p.841bc.net/geohashdi-li-wei-zhi-de-wei-yi-bian-ma-suan-fa.html">Geohash地理位置的唯一编码算法</a></h1>
 <footer class="post-info">
         <abbr class="published" title="2019-06-04T00:00:00+02:00">
                 Published: Tue 04 June 2019
@@ -30,9 +30,10 @@
         <address class="vcard author">
                 By                         <a class="url fn" href="http://p.841bc.net/author/wang-jiang.html">Wang Jiang</a>
         </address>
-<p>In <a href="http://p.841bc.net/category/nginx.html">Nginx</a>.</p>
-<p>tags: <a href="http://p.841bc.net/tag/nginx.html">Nginx</a> </p>
-</footer><!-- /.post-info --><p>服务的需要一个自定义的header，'my_header'，选择'<em>'而不是'-'的原因就不在这里讨论了。通过nginx反向代理后，传到服务端，'my_header'不见了。问了一下Bing（没用谷歌，也没用Baidu），结果发现nginx里有一个 开关，' underscores_in_headers'，设置为‘off’就会拦截所有带'</em>'的header，设置为‘on’就放过。缺省是‘off’。所以只要在http或者server中设置一下就好了。</p>                </article>
+<p>In <a href="http://p.841bc.net/category/gis.html">GIS</a>.</p>
+<p>tags: <a href="http://p.841bc.net/tag/gis.html">GIS</a> <a href="http://p.841bc.net/tag/geohash.html">Geohash</a> </p>
+</footer><!-- /.post-info --><p><a href="https://en.wikipedia.org/wiki/Geohash">Geohash</a>是一种能够让经纬度和唯一字符串相互转换的算法。例如：可以用 ‘ ezs42’代表‘-5.60302734375, 42.60498046875’。该技术具备这样一种特性，字符串的长途和小数点后的位数成正比，也就是说，字符串越长精度越高。</p>
+<p>这个技术运行我们对一个位置进行带精度的比较，比如说：我们可以将一个点作为缓存的键值。</p>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
                     <h1>Other articles</h1>
@@ -41,8 +42,8 @@
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="http://p.841bc.net/nginxshi-xian-shuang-xiang-ren-zheng-zhi-jie-shang-jiao-ben-xiang-xue-xi-geng-duo-de-kan-can-kao.html" rel="bookmark"
-                           title="Permalink to Nginx实现双向认证，直接上脚本，想学习更多的看参考">Nginx实现双向认证，直接上脚本，想学习更多的看参考</a></h1>
+                    <h1><a href="http://p.841bc.net/jing-wei-du-zhuan-webmercatorzuo-biao.html" rel="bookmark"
+                           title="Permalink to 经纬度转WebMercator坐标">经纬度转WebMercator坐标</a></h1>
                 </header>
 
                 <div class="entry-content">
@@ -54,17 +55,16 @@
         <address class="vcard author">
                 By                         <a class="url fn" href="http://p.841bc.net/author/wang-jiang.html">Wang Jiang</a>
         </address>
-<p>In <a href="http://p.841bc.net/category/nginx.html">Nginx</a>.</p>
-<p>tags: <a href="http://p.841bc.net/tag/nginx.html">nginx</a> <a href="http://p.841bc.net/tag/https.html">https</a> <a href="http://p.841bc.net/tag/openssl.html">openssl</a> <a href="http://p.841bc.net/tag/zheng-shu.html">证书</a> </p>
-</footer><!-- /.post-info -->                <p>第一步、创建证书</p>
-<p>//创建根证书root</p>
-<p>openssl genrsa -des3 -out root.key 4096</p>
-<p>openssl req -new -x509 -days 3650 -key root.key -out root.crt</p>
-<p>//创建服务器证书server</p>
-<p>openssl genrsa -des3 -out server.key 1024
-openssl req -new -key server.key -out server.csr 
-openssl x509 -req -days 3560 -in server.csr  -CA root.crt …</p>
-                <a class="readmore" href="http://p.841bc.net/nginxshi-xian-shuang-xiang-ren-zheng-zhi-jie-shang-jiao-ben-xiang-xue-xi-geng-duo-de-kan-can-kao.html">read more</a>
+<p>In <a href="http://p.841bc.net/category/gis.html">GIS</a>.</p>
+<p>tags: <a href="http://p.841bc.net/tag/gis.html">GIS</a> <a href="http://p.841bc.net/tag/webmercator.html">WebMercator</a> <a href="http://p.841bc.net/tag/jing-wei-du.html">经纬度</a> </p>
+</footer><!-- /.post-info -->                <p>输入x_lon,y_lat</p>
+<p>输出x_mercator，y_mercator</p>
+<p>num = x_lon * 0.017453292519943295        <br>
+ x = 6378137.0 * num        <br>
+ a = y_lat * 0.017453292519943295        <br>
+ x_mercator = x       <br>
+ y_mercator = 3189068.5 * math.log((1.0 + math.sin(a)) / (1.0 - math.sin(a)))</p>
+                <a class="readmore" href="http://p.841bc.net/jing-wei-du-zhuan-webmercatorzuo-biao.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
                 </ol><!-- /#posts-list -->
