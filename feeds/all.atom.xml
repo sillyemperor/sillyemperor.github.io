@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>841BC</title><link href="http://p.841bc.net/" rel="alternate"></link><link href="http://p.841bc.net/feeds/all.atom.xml" rel="self"></link><id>http://p.841bc.net/</id><updated>2019-06-04T00:00:00+02:00</updated><entry><title>加密算法比较</title><link href="http://p.841bc.net/my-super-post.html" rel="alternate"></link><published>2019-06-04T00:00:00+02:00</published><updated>2019-06-04T00:00:00+02:00</updated><author><name>wj</name></author><id>tag:p.841bc.net,2019-06-04:/my-super-post.html</id><summary type="html">&lt;p&gt;几种常用加密算法的比较&lt;/p&gt;</summary><content type="html">&lt;h3&gt;加密算法比较&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;采用的机器&lt;/li&gt;
+&lt;li&gt;型号名称：   MacBook Pro&lt;/li&gt;
+&lt;li&gt;处理器名称：  Intel Core i5&lt;/li&gt;
+&lt;li&gt;处理器速度：  3.1 GHz&lt;/li&gt;
+&lt;li&gt;处理器数目：  1&lt;/li&gt;
+&lt;li&gt;核总数：    2&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;内存： 8 GB&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;采用的Java版本：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Java HotSpot(TM) 64-Bit Server VM (build 25.162-b12, mixed mode)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;处理5000次相同数据消耗的毫秒数&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;加密&lt;/th&gt;
+&lt;th&gt;解密&lt;/th&gt;
+&lt;th&gt;可逆&lt;/th&gt;
+&lt;th&gt;对称密钥&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;MD5&lt;/td&gt;
+&lt;td&gt;151&lt;/td&gt;
+&lt;td&gt;/&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;/&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SHA-1&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;td&gt;/&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;/&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SHA-256&lt;/td&gt;
+&lt;td&gt;84&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;/&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AES&lt;/td&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;41&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DES&lt;/td&gt;
+&lt;td&gt;77&lt;/td&gt;
+&lt;td&gt;122&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;RSA&lt;/td&gt;
+&lt;td&gt;1265&lt;/td&gt;
+&lt;td&gt;25120&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;可以看到可逆的算法比不可逆的执行效率低，非对称比对称的执行效率低。不可逆算法适合来对数据进行签名，可以实现防篡改功能。可逆算法适合加密传输，可以用对称和非对称结合实现最好的效果。著名的HTTPS协议就采用非对称加密对传输密钥进行加密，而采用对称算法进行数据加密，这样效率较低的非对称算法只在握手的时候执行一次，即不会对后面的数据传输产生影响，又保证了极好的安全性。&lt;/p&gt;
+&lt;p&gt;在算法选择上，MD5已经过时了，可以采用性能和安全性都更好的SHA-256。对称加密采用AES。&lt;/p&gt;</content><category term="MD5"></category><category term="SHA"></category><category term="AES"></category></entry><entry><title>加密算法比较</title><link href="http://p.841bc.net/nginx-client-cert.html" rel="alternate"></link><published>2019-06-04T00:00:00+02:00</published><updated>2019-06-04T00:00:00+02:00</updated><author><name>wj</name></author><id>tag:p.841bc.net,2019-06-04:/nginx-client-cert.html</id><summary type="html">&lt;p&gt;几种常用加密算法的比较&lt;/p&gt;</summary><content type="html">&lt;h4&gt;Nginx实现双向认证，直接上脚本，想学习更多的看参考。&lt;/h4&gt;
+&lt;p&gt;第一步、创建证书&lt;/p&gt;
+&lt;p&gt;//创建根证书root&lt;/p&gt;
+&lt;p&gt;openssl genrsa -des3 -out root.key 4096&lt;/p&gt;
+&lt;p&gt;openssl req -new -x509 -days 3650 -key root.key -out root.crt&lt;/p&gt;
+&lt;p&gt;//创建服务器证书server&lt;/p&gt;
+&lt;p&gt;openssl genrsa -des3 -out server.key 1024
+openssl req -new -key server.key -out server.csr 
+openssl x509 -req -days 3560 -in server.csr  -CA root.crt  -CAkey root.key -set_serial 01 -out server.crt&lt;/p&gt;
+&lt;p&gt;//创建乘客端证书client&lt;/p&gt;
+&lt;p&gt;openssl genrsa -des3 -out client.key 1024
+openssl req -new -key client.key -out client.csr 
+openssl x509 -req -days 3560 -in client.csr  -CA root.crt  -CAkey root.key -set_serial 01 -out client.crt&lt;/p&gt;
+&lt;p&gt;第二步、配置服务器&lt;/p&gt;
+&lt;p&gt;//配置Nginx&lt;/p&gt;
+&lt;p&gt;server {
+        listen       443 ssl;
+        server_name  localhost www.test.net;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="n"&gt;ssl&lt;/span&gt; &lt;span class="k"&gt;on&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;ssl_certificate&lt;/span&gt;      &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="err"&gt;路径&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cert&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;server&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;crt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;ssl_certificate_key&lt;/span&gt;  &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="err"&gt;路径&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cert&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;server&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;key&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="n"&gt;ssl_client_certificate&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="err"&gt;路径&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cert&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;crt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;ssl_verify_client&lt;/span&gt; &lt;span class="k"&gt;on&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="k"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;root&lt;/span&gt;   &lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;index&lt;/span&gt;  &lt;span class="k"&gt;index&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt; &lt;span class="k"&gt;index&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;htm&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="err"&gt;}&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;重新启动nginx后，服务器就配置好了。下面说说几种客户端如何访问。&lt;/p&gt;
+&lt;p&gt;第三步、客户端调用&lt;/p&gt;
+&lt;p&gt;假设我们的访问链接就是：https://www.test.net。&lt;/p&gt;
+&lt;p&gt;为了方便使用，将客户端证书与密钥打包。&lt;/p&gt;
+&lt;p&gt;//打包脚本&lt;/p&gt;
+&lt;p&gt;openssl pkcs12 -export -clcerts -in client.crt -inkey client.key -out client.p12&lt;/p&gt;
+&lt;p&gt;//curl&lt;/p&gt;
+&lt;p&gt;curl -Sv --cert client.p12:client.key的密码  -k https://www.test.net&lt;/p&gt;
+&lt;p&gt;//Python，使用了 requests，会要求输入client.key的密码 &lt;/p&gt;
+&lt;p&gt;import requests
+requests.get('https://www.test.net', verify=False, cert=('client.crt', 'client.key'))&lt;/p&gt;
+&lt;p&gt;//使用requests_pkcs12&lt;/p&gt;
+&lt;p&gt;from requests_pkcs12 import get
+r = get('https://www.test.net', pkcs12_filename='client.p12', pkcs12_password='client.key的密码', verify=False)&lt;/p&gt;
+&lt;p&gt;此外，这个打包文件还可以直接载入浏览器。&lt;/p&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;p&gt;http://blog.nategood.com/client-side-certificate-authentication-in-ngi&lt;/p&gt;</content><category term="nginx"></category><category term="https"></category><category term="openssl"></category><category term="证书"></category></entry></feed>
