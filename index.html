@@ -21,7 +21,42 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://sillyemperor.github.io/a-li-yun-ci-pan-gua-zai.html">阿里云磁盘挂载</a></h1>
+                    <h1 class="entry-title"><a href="https://sillyemperor.github.io/nginxfa-bu-mp4wen-jian.html">Nginx发布MP4文件</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2019-07-27T00:00:00+02:00">
+                Published: Sat 27 July 2019
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://sillyemperor.github.io/author/wang-jiang.html">Wang Jiang</a>
+        </address>
+<p>In <a href="https://sillyemperor.github.io/category/nginx.html">Nginx</a>.</p>
+<p>tags: <a href="https://sillyemperor.github.io/tag/nginx.html">nginx</a> <a href="https://sillyemperor.github.io/tag/mp4.html">mp4</a> </p>
+</footer><!-- /.post-info --><div class="highlight"><pre><span></span><span class="n">server</span> <span class="err">{</span>
+    <span class="k">listen</span>  <span class="mi">80</span><span class="p">;</span>
+    <span class="k">server_name</span>  <span class="n">video</span><span class="p">.</span><span class="mi">841</span><span class="n">bc</span><span class="p">.</span><span class="n">net</span><span class="p">;</span>
+
+    <span class="k">location</span> <span class="o">/</span> <span class="err">{</span>
+        <span class="n">root</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">share</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">videos</span><span class="p">;</span>
+        <span class="n">mp4</span><span class="p">;</span>
+        <span class="n">mp4_buffer_size</span>     <span class="mi">1</span><span class="n">m</span><span class="p">;</span>
+        <span class="n">mp4_max_buffer_size</span> <span class="mi">4096</span><span class="n">m</span><span class="p">;</span>
+    <span class="err">}</span>
+<span class="err">}</span>
+</pre></div>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://sillyemperor.github.io/a-li-yun-ci-pan-gua-zai.html" rel="bookmark"
+                           title="Permalink to 阿里云磁盘挂载">阿里云磁盘挂载</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2019-06-04T00:00:00+02:00">
                 Published: Tue 04 June 2019
@@ -32,18 +67,16 @@
         </address>
 <p>In <a href="https://sillyemperor.github.io/category/linux.html">Linux</a>.</p>
 <p>tags: <a href="https://sillyemperor.github.io/tag/linux.html">linux</a> </p>
-</footer><!-- /.post-info --><p>fdisk  -l
+</footer><!-- /.post-info -->                <p>fdisk  -l
 fdisk /dev/vdb         依次输入 n，p，1，两次回车，wq
 mkfs.ext3 /dev/vdb1
 echo /dev/vdb1 /mnt ext3 defaults 0 0 &gt;&gt; /etc/fstab
 mount /dev/vdb1 /mnt
 df -h</p>
-<p>按照上面这个顺序就可以完成挂载，具体命令的含义，可以自行搜索。</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<p>按照上面这个顺序就可以完成挂载，具体命令的含义，可以自行搜索。</p>
+                <a class="readmore" href="https://sillyemperor.github.io/a-li-yun-ci-pan-gua-zai.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -129,9 +162,9 @@ df -h</p>
 <tr>
 <td>SHA-256</td>
 <td>84</td>
+<td>/</td>
 <td>是</td>
 <td>/</td>
-<td></td>
 </tr>
 <tr>
 <td>AES</td>
@@ -323,40 +356,11 @@ openssl x509 -req -days 3560 -in server.csr  -CA root.crt …</p>
                 <a class="readmore" href="https://sillyemperor.github.io/pythonshu-zu-fu-zhi-de-xian-jing.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="https://sillyemperor.github.io/yong-systemctlguan-li-nginxfu-wu-shi-xian-zi-dong-qi-dong.html" rel="bookmark"
-                           title="Permalink to 用systemctl管理nginx服务实现自动启动">用systemctl管理nginx服务实现自动启动</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2019-06-04T00:00:00+02:00">
-                Published: Tue 04 June 2019
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="https://sillyemperor.github.io/author/wang-jiang.html">Wang Jiang</a>
-        </address>
-<p>In <a href="https://sillyemperor.github.io/category/nginx.html">Nginx</a>.</p>
-<p>tags: <a href="https://sillyemperor.github.io/tag/nignx.html">nignx</a> <a href="https://sillyemperor.github.io/tag/systemctl.html">systemctl</a> </p>
-</footer><!-- /.post-info -->                <p>创建文件</p>
-<p>/lib/systemd/system/nginx.service</p>
-<p>[Unit]</p>
-<p>Description=The NGINX HTTP and reverse proxy server</p>
-<p>After=syslog.target network.target remote-fs.target nss-lookup.target</p>
-<p>[Service]</p>
-<p>Type=forking</p>
-<p>PIDFile=/run/nginx.pid</p>
-<p>ExecStartPre=/usr/sbin/nginx -t</p>
-<p>ExecStart=/usr/sbin/nginx</p>
-<p>ExecReload=/usr/sbin/nginx -s reload</p>
-<p>ExecStop=/bin/kill -s …</p>
-                <a class="readmore" href="https://sillyemperor.github.io/yong-systemctlguan-li-nginxfu-wu-shi-xian-zi-dong-qi-dong.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
                 </ol><!-- /#posts-list -->
+<p class="paginator">
+    Page 1 / 2
+        <a href="https://sillyemperor.github.io/index2.html">&raquo;</a>
+</p>
                 </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">

@@ -21,7 +21,42 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://sillyemperor.github.io/nginxguo-lu-liao-dai-xia-hua-xian-de-zi-ding-yi-header.html">Nginx过滤了带下划线的自定义Header</a></h1>
+                    <h1 class="entry-title"><a href="https://sillyemperor.github.io/nginxfa-bu-mp4wen-jian.html">Nginx发布MP4文件</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2019-07-27T00:00:00+02:00">
+                Published: Sat 27 July 2019
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://sillyemperor.github.io/author/wang-jiang.html">Wang Jiang</a>
+        </address>
+<p>In <a href="https://sillyemperor.github.io/category/nginx.html">Nginx</a>.</p>
+<p>tags: <a href="https://sillyemperor.github.io/tag/nginx.html">nginx</a> <a href="https://sillyemperor.github.io/tag/mp4.html">mp4</a> </p>
+</footer><!-- /.post-info --><div class="highlight"><pre><span></span><span class="n">server</span> <span class="err">{</span>
+    <span class="k">listen</span>  <span class="mi">80</span><span class="p">;</span>
+    <span class="k">server_name</span>  <span class="n">video</span><span class="p">.</span><span class="mi">841</span><span class="n">bc</span><span class="p">.</span><span class="n">net</span><span class="p">;</span>
+
+    <span class="k">location</span> <span class="o">/</span> <span class="err">{</span>
+        <span class="n">root</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">share</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">videos</span><span class="p">;</span>
+        <span class="n">mp4</span><span class="p">;</span>
+        <span class="n">mp4_buffer_size</span>     <span class="mi">1</span><span class="n">m</span><span class="p">;</span>
+        <span class="n">mp4_max_buffer_size</span> <span class="mi">4096</span><span class="n">m</span><span class="p">;</span>
+    <span class="err">}</span>
+<span class="err">}</span>
+</pre></div>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://sillyemperor.github.io/nginxguo-lu-liao-dai-xia-hua-xian-de-zi-ding-yi-header.html" rel="bookmark"
+                           title="Permalink to Nginx过滤了带下划线的自定义Header">Nginx过滤了带下划线的自定义Header</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2019-06-04T00:00:00+02:00">
                 Published: Tue 04 June 2019
@@ -32,12 +67,10 @@
         </address>
 <p>In <a href="https://sillyemperor.github.io/category/nginx.html">Nginx</a>.</p>
 <p>tags: <a href="https://sillyemperor.github.io/tag/nginx.html">Nginx</a> </p>
-</footer><!-- /.post-info --><p>服务的需要一个自定义的header，'my_header'，选择'<em>'而不是'-'的原因就不在这里讨论了。通过nginx反向代理后，传到服务端，'my_header'不见了。问了一下Bing（没用谷歌，也没用Baidu），结果发现nginx里有一个 开关，' underscores_in_headers'，设置为‘off’就会拦截所有带'</em>'的header，设置为‘on’就放过。缺省是‘off’。所以只要在http或者server中设置一下就好了。</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+</footer><!-- /.post-info -->                <p>服务的需要一个自定义的header，'my_header'，选择'<em>'而不是'-'的原因就不在这里讨论了。通过nginx反向代理后，传到服务端，'my_header'不见了。问了一下Bing（没用谷歌，也没用Baidu），结果发现nginx里有一个 开关，' underscores_in_headers'，设置为‘off’就会拦截所有带'</em>'的header，设置为‘on’就放过。缺省是‘off’。所以只要在http或者server中设置一下就好了。</p>
+                <a class="readmore" href="https://sillyemperor.github.io/nginxguo-lu-liao-dai-xia-hua-xian-de-zi-ding-yi-header.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
